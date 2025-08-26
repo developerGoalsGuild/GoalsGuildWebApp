@@ -1,0 +1,24 @@
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fffbe6;
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #7c470033;
+  padding: 24px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}

@@ -1,0 +1,70 @@
+body {
+  background: #f5e9da;
+  font-family: 'MedievalSharp', serif;
+  color: #7C4700;
+  margin: 0;
+}
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fffbe6;
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #7c470033;
+  padding: 24px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}
+.medieval-card {
+  background: #f9e7c3;
+  border: 2px solid #7c4700;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 2px 12px #7c470022;
+}
+input, button {
+  font-family: 'MedievalSharp', serif;
+  font-size: 1rem;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d4af37;
+}
+button {
+  background: #d4af37;
+  color: #7c4700;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #7c4700;
+  color: #fffbe6;
+}
+.msg {
+  margin-top: 12px;
+  color: #b30000;
+}
+.social-login button {
+  margin: 4px 8px 4px 0;
+  background: #fffbe6;
+  color: #7c4700;
+  border: 1px solid #7c4700;
+}
+.social-login button:hover {
+  background: #d4af37;
+}
