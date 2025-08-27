@@ -1,7 +1,11 @@
+/*
+  Lambda module updated to support container image deployment.
+  */
+
 resource "aws_lambda_function" "this" {
   function_name = var.function_name
   package_type  = "Image"
-  image_uri     = var.image_uri
+  image_uri     = "${var.image_uri}:${var.image_tag}"
   role          = aws_iam_role.lambda_exec.arn
 
   environment {

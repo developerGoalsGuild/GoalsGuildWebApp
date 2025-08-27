@@ -1,0 +1,18 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "## Docker Image Build and Push Automation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.3.0"
+  }
+}
