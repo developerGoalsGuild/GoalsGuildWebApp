@@ -1,1 +1,3 @@
 
+# Prevent Bolt from running any startup commands automatically
+*
