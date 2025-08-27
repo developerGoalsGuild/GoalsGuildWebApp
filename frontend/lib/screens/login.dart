@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,15 +8,15 @@ class LoginScreen extends StatelessWidget {
         title: Row(
           children: [
             Image.asset('assets/logo.svg', height: 40),
-            const SizedBox(width: 12),
-            const Text('Goals Guild'),
+            SizedBox(width: 12),
+            Text('Goals Guild'),
           ],
         ),
       ),
       body: Center(
         child: ElevatedButton.icon(
-          icon: const Icon(Icons.login),
-          label: const Text('Sign in with Cognito'),
+          icon: Icon(Icons.login),
+          label: Text('Sign in with Cognito'),
           onPressed: () {
             // TODO: Implement Cognito Auth
             Navigator.pushReplacementNamed(context, '/home');

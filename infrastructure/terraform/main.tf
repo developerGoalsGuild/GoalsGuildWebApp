@@ -42,3 +42,12 @@ module "cognito" {
   twitter_consumer_key = var.twitter_consumer_key
   twitter_consumer_secret = var.twitter_consumer_secret
 }
+
+
+module "parameter_store" {
+				source              = "./goalsguild_parameter_store"
+				cognito_user_pool_id = module.cognito.user_pool_id
+				cognito_client_id    = module.cognito.client_id
+				users_table_name     = module.dynamodb.users_table_name
+				jwt_secret           = ""
+			}
