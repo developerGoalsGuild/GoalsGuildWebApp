@@ -1,27 +1,13 @@
-# Bring in the AWS Lambda Web Adapter
-FROM public.ecr.aws/awsguru/aws-lambda-adapter:0.9.1 AS lambda-adapter
+# Lambda-optimized Dockerfile
+FROM public.ecr.aws/lambda/python:3.11
 
+WORKDIR /var/task
 
-FROM python:3.12-slim
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
-WORKDIR /app
-
+COPY app/ ./app/
 COPY requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-
-COPY ./app .
-
-
-
-# Copy the adapter binary into the Lambda extensions dir (per official docs)
-COPY --from=lambda-adapter /lambda-adapter /opt/extensions/lambda-adapter
 ENV PYTHONPATH=/var/task/app
-# Enable LWA and expose the HTTP server
-ENV AWS_LAMBDA_EXEC_WRAPPER=/opt/bootstrap \
-    AWS_LWA_PORT=8082 \
-    PORT=8082 \
-    RUST_LOG=info
 
-EXPOSE 8082
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8082"]
+CMD ["app.main:app"]

@@ -4,4 +4,3 @@ pydantic
 uvicorn
 PyJWT
 requests
-pydantic[email]==2.9.0
