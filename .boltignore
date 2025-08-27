@@ -1,3 +1,7 @@
 
 # Prevent Bolt from running any startup commands automatically
-*
+pubspec.lock
+package-lock.json
+.metadata
+*.iml
+*.svg

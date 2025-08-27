@@ -3,5 +3,6 @@ node_modules
 .idea
 .vscode
 build
+.idl
 pubspec.lock
 package-lock.json
