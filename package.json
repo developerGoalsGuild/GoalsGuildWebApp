@@ -1,0 +1,8 @@
+{
+  "name": "goals-guild-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start-frontend": "./start-frontend.sh"
+  }
+}
